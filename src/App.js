@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import react,{useState} from 'react'
+
+import LoginForm from './components/loginForm/LoginForm'
+import RegisterForm from './components/registerForm/RegisterForm'
 
 function App() {
+
+  const [current, setcurrent] = useState(<LoginForm/>)
+
+function loghandler(){
+  setcurrent(<LoginForm/>)
+}
+
+function registerhandler(){
+  setcurrent(<RegisterForm/>)
+}
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {current}
+      <br/>
+      <button onClick={() => loghandler()}>log</button>
+      <button onClick={() => registerhandler()}>register</button>
     </div>
   );
 }
