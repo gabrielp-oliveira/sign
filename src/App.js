@@ -1,25 +1,22 @@
-import react,{useState} from 'react'
+import './App.css';
 
-import LoginForm from './components/loginForm/LoginForm'
-import RegisterForm from './components/registerForm/RegisterForm'
+import Login from './pages/login/login.jsx'
+import Dashboard from './pages/dashboard/dashboard'
+
+import { Route, Redirect } from 'react-router-dom'
+
 
 function App() {
 
-  const [current, setcurrent] = useState(<LoginForm/>)
 
-function loghandler(){
-  setcurrent(<LoginForm/>)
-}
 
-function registerhandler(){
-  setcurrent(<RegisterForm/>)
-}
   return (
     <div className="App">
-      {current}
-      <br/>
-      <button onClick={() => loghandler()}>log</button>
-      <button onClick={() => registerhandler()}>register</button>
+      <Route path="/" exact component={Dashboard} />
+      <Route exact path="/">{localStorage.Token ? <Redirect to="/" /> : <Redirect to="login"/>}</Route>
+      <Route path="/login" component={Login} />
+
+      
     </div>
   );
 }
