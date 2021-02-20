@@ -1,0 +1,38 @@
+#Dashboard{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    color: white;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid var(--green); 
+    padding: 15px;
+    position: relative;
+    height: 75px;
+    justify-content: flex-end;
+
+    
+}
+
+
+main {
+    display: flex;
+    height: 100%;
+}
+
+#body {
+    width: calc(100% - 200px);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+#body > h3{
+    align-self: flex-start;
+    margin: 15px 0px 15px 20px;
+
+}

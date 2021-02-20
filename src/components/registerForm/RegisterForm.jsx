@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios'
+import history from '../../history/history'
 
 function Register() {
 
@@ -12,6 +13,11 @@ function Register() {
         const email = document.getElementsByName('email')[0]
         const password = document.getElementsByName('password')[0]
 
+        const resetInput = () => {
+            email.value = ''
+            name.value = ''
+            password.value = ''
+        }
 
         axios.post('http://localhost:8080/auth/register', {
             name: name.value,
@@ -19,12 +25,21 @@ function Register() {
             password: password.value}
         )
             .then((data) => {
-                console.log('teste')
-                console.log(data.data)
+                if (!data.data.error) {
+                    localStorage.setItem('Token', data.data.token)
+                    localStorage.setItem('User_id', data.data.userInfo._id)
+                }else{
+                    resetInput()
+                } return data
 
             })
-            .catch(() => {
+            .then(() => {
+                history.push('/')
+                document.location.reload();
+            })
+            .catch((err) => {
                 console.log('error')
+                console.log(err)
 
             })
     }

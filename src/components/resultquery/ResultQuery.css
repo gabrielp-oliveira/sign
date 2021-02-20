@@ -1,0 +1,43 @@
+.planet span > img {
+    height: 25px;
+    width: 25px;
+}
+.planet span > svg {
+    height: 35px;
+    width: 35px;
+    color: black;
+}
+.planet{
+    padding-left: 1px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background: var(--green);
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100px;
+    width: 100px;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.3);
+
+}
+
+.result{
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.sign-logo{
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    margin: 1px;
+    border-radius: 5px;
+    background: var(--greenLight);
+}

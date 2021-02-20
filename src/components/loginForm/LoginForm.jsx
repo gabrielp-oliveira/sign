@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import history from '../../history/history';
 
 function LoginForm() {
 
@@ -9,19 +10,28 @@ function LoginForm() {
         const email = document.getElementsByName('email')[0]
         const password = document.getElementsByName('password')[0]
 
-        console.log(email.value, password.value)
+        const resetInput = () => {
+            email.value = ''.trim()
+            password.value = ''.trim()
+        }
         axios.post("http://localhost:8080/auth/authenticate", {
             email: email.value,
             password: password.value
         })
-            .then((resp) => {
+        .then((resp) => {
                 localStorage.setItem('Token', resp.data.token)
                 localStorage.setItem('User_id', resp.data.userInfo._id)
-     
-            })
-            .then(() => {
+        })
+        .then(() => {
+                history.push('/')
                 document.location.reload();
-            })
+                console.log('1')
+        }).catch((error) => {
+            console.log('error')
+            resetInput()
+            console.log(error)
+
+        })
 
     }
     return (

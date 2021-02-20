@@ -1,7 +1,10 @@
-:root {
-    --green: rgb(53, 170, 125);
+.login-body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
 }
-
 .active, .stand{
     border: 15px;
     color: white;

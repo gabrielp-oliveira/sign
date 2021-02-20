@@ -12,9 +12,10 @@ function App() {
 
   return (
     <div className="App">
-      <Route path="/" exact component={Dashboard} />
-      <Route exact path="/">{localStorage.Token ? <Redirect to="/" /> : <Redirect to="login"/>}</Route>
-      <Route path="/login" component={Login} />
+        <Route path="/" exact component={Dashboard}/>
+        <Route exact path="/">{localStorage.Token ? <Redirect to="/" /> : <Redirect to="login"/>}</Route>
+        <Route exact path="/login">{!localStorage.Token ? <Redirect to="/login" /> : <Redirect to="/"/>}</Route>
+        <Route path="/login" component={Login} />
 
       
     </div>

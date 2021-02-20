@@ -1,0 +1,39 @@
+.red {
+    color: var(--red);
+    text-decoration: wavy;
+}
+
+footer{
+    width: 100%;
+    /* height: 100px; */
+    border-top: 1px solid var(--green);
+    background: rgb(17, 17, 17);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+footer > span {
+    font-size: 18px;
+    margin: 5px 0px 18px 0px;
+}
+.media-social{
+    width: 280px;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    margin: 5px 0px 5px 0px;
+
+}
+.github > a, .codepen > a, .linkedin > a{
+    color: white;
+    font-size: 25px;
+    /* background: red; */
+    transition: 400ms;
+}
+
+.github > a:hover, .codepen > a:hover, .linkedin > a:hover{
+    color: var(--greenLight);
+}

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import LoginForm from '../../components/loginForm/LoginForm'
 import RegisterForm from '../../components/registerForm/RegisterForm'
+import Footer from '../../components/footer/footer'
+
 import './login.css'
 
 function Login() {
@@ -55,6 +57,8 @@ function Login() {
     }
 
     return (
+        <div className="login-body">
+
             <div id="log-Page">
                 <div className="buttons-options">
                     <div id="button-log"
@@ -65,6 +69,8 @@ function Login() {
 
                 {option.page}
             </div>
+            <Footer></Footer>
+        </div>
     )
 }
 

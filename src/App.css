@@ -1,3 +1,10 @@
+:root {
+  --green: rgb(53, 170, 125);
+  --greenLight: hsl(162, 72%, 61%);
+  --red: rgb(224, 98, 98);
+  --redDark: rgb(139, 64, 64);
+}
+
 .App {
   text-align: center;
   flex-direction: column;

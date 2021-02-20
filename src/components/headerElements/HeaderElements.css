@@ -1,0 +1,27 @@
+.button-header{
+    width: 80px;
+    appearance: none;
+    background-color: var(--green);
+    padding: 10px 15px;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 18px;
+    transition-duration: 0.25s;
+    margin-right: 15px;
+}
+.Home{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+.button-header:hover{
+    background: var(--greenLight);
+}
+.LogOut{
+    background: var(--red);
+}
+.LogOut:hover{
+    background: var(--redDark);
+}
