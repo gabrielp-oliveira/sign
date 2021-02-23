@@ -1,23 +1,19 @@
 import React from 'react'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faWater, faFish, faStrikethrough, faPastafarianism, faBalanceScale, faHorse, faSignature, faPaw } from '@fortawesome/free-solid-svg-icons'
-
 const sign = {
-    Aries: <FontAwesomeIcon icon={faPastafarianism} />,
-    Taurus: <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Taurus.svg" alt="" />,
-    Gemini: <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Gemini.svg" alt="" />,
-    Cancer: <FontAwesomeIcon icon={faStrikethrough} />,
-    Leo: <FontAwesomeIcon icon={faPaw} />,
-    Virgo: <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Virgo.svg" alt="" />,
-    Libra: <FontAwesomeIcon icon={faBalanceScale} />,
-    Scorpio: <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Scorpio.svg" alt="" />,
-    Sagittarius: <FontAwesomeIcon icon={faHorse} />,
-    Capricorn: <FontAwesomeIcon icon={faSignature} />,
-    Aquarius: <FontAwesomeIcon icon={faWater} />,
-    Pisces: <FontAwesomeIcon icon={faFish} />,
+    Aries: <span> &#9800;</span>,
+    Taurus: <span>&#9801;</span>,
+    Gemini: <span>&#9802;</span>,
+    Cancer: <span>&#9803;</span>,
+    Leo: <span>&#9804;</span>,
+    Virgo: <span>&#9805;</span>,
+    Libra: <span>&#9806;</span>,
+    Scorpio: <span>&#9807;</span>,
+    Sagittarius: <span>&#9808;</span>,
+    Capricorn: <span>&#9809;</span>,
+    Aquarius: <span>&#9810;</span>,
+    Pisces: <span>&#9811;</span>,
 }
-
 function SignsLogo({ name }) {
 
     return (

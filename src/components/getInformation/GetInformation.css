@@ -1,0 +1,65 @@
+.information {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.information span {
+    font-style: italic;
+}
+
+.information > div{
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.Functionalities{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+.Functionalities > li {
+    margin: 5px 5px 5px 10px;
+}
+.information > div > h4{
+    width: 100%;
+    margin: 5px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.information > div > span {
+    margin: 2px;
+}
+
+.information > div > p {
+    margin: 5px 0px;
+}
+
+.information > div > h4::after{
+    content: '';
+    width: 30%;
+    height: 1px;
+    background: var(--redDark);
+    align-self: center;
+    margin: 0px 20px;
+
+}
+.information > div > h4::before{
+    content: '';
+    width: 30%;
+    height: 1px;
+    background: var(--redDark);
+    align-self: center;
+    margin: 0px 20px;
+}
+.information > div > p > a {
+    color: var(--green);
+}
+.information > div > p > a:hover{
+    color: var(--greenLight);
+}

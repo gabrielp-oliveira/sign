@@ -36,8 +36,8 @@
     background: rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.1);
-    width: 320px;
-    height: 320px;
+    max-width: 320px;
+    height: 365px;
     padding: 20px;
     align-self: center;
     margin-top: 50px;
@@ -107,4 +107,26 @@
 .reg-form, .log-form{
     opacity: 0;
     transition: 350ms;
+}
+.forgot{
+    padding: 0px 10px 10px 0px;
+    align-self: center;
+    margin-left: 100px;
+    color: var(--green);
+}
+.forgot:hover{
+    color: var(--greenLight)
+}
+
+.error-Message{
+    color: white;
+    background: rgb(241, 101, 101);
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    margin: 5px 0px;
+    font-weight: 700;
 }

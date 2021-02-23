@@ -8,18 +8,14 @@
     color: black;
 }
 .planet{
-    padding-left: 1px;
-    border: 1px solid white;
     border-radius: 5px;
     background: var(--green);
     margin: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     height: 100px;
     width: 100px;
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.3);
-
 }
 
 .result{
@@ -30,14 +26,20 @@
 }
 
 .sign-logo{
-    border: 1px solid rgb(0, 0, 0, 0.2);
+    /* border: 1px solid rgb(0, 0, 0, 0.2); */
     width: 30px;
     height: 30px;
     display: flex;
     justify-content: center;
     align-self: center;
     align-items: center;
-    margin: 1px;
+    /* margin: 1px; */
     border-radius: 5px;
-    background: var(--greenLight);
+    /* background: var(--greenLight); */
+}
+.sign-logo > span {
+    font-size: 30px;
+    margin-top: 10px;
+    text-shadow: none;
+
 }

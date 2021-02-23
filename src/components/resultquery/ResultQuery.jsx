@@ -13,14 +13,24 @@ function ResultQuery({ query }) {
 
         keys.forEach((element) => {
             if (element !== 'id' && element !== 'person' && element !== 'queryId' && element !== 'dateOfBirth') {
+                
+                if(query.error){
+                    setMap(<div className="error-Message">{query[element]}</div>)
+                    setInterval(() => {
+                        
+                        return document.querySelector('.error-Message').style.display = 'flex'
+                    }, 100)
+                }else{
 
                     setMap(oldArray => [...oldArray,
+                        
                         <div className="planet" key={query[element].position}>
                     <h3>{query[element].planet}</h3>
                     <strong>{query[element].sign}</strong>
                     <span className="sign-logo"><SignsLogo name={query[element].sign}/></span>
                 </div>
                 ])
+            }   
             }
         })
     }, [query])

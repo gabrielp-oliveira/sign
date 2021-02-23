@@ -7,6 +7,7 @@ function Register() {
 
     function handlerRegister(e) {
         e.preventDefault()
+        const ErrorMessage = document.querySelector('.error-Message')
 
 
         const name = document.getElementsByName('name')[0]
@@ -18,6 +19,10 @@ function Register() {
             name.value = ''
             password.value = ''
         }
+        if(!email.checkValidity()){
+            resetInput()
+            return ErrorMessage.innerHTML = 'Email invalid'
+        }
 
         axios.post('http://localhost:8080/auth/register', {
             name: name.value,
@@ -28,25 +33,27 @@ function Register() {
                 if (!data.data.error) {
                     localStorage.setItem('Token', data.data.token)
                     localStorage.setItem('User_id', data.data.userInfo._id)
+                    history.push('/')
+                    document.location.reload();
+                    ErrorMessage.style.display = 'none'
                 }else{
                     resetInput()
-                } return data
+                    ErrorMessage.style.display = 'flex'
+                    ErrorMessage.innerHTML = data.data.error                    
+                }
 
             })
-            .then(() => {
-                history.push('/')
-                document.location.reload();
-            })
             .catch((err) => {
-                console.log('error')
-                console.log(err)
+                resetInput()
+                ErrorMessage.innerHTML = 'Ops, something wrong'
 
             })
     }
 
     return (
         <div className="reg-form">
-
+            
+            <div className="error-Message"></div>
             <form className="form">
                 <input type="text" name="name" className="input" placeholder="Name" />
                 <input type="email" name="email" className="input" placeholder="Email" />
