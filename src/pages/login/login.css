@@ -99,10 +99,11 @@
     cursor: pointer;
     font-size: 18px;
     transition-duration: 0.25s;
+    align-self: center;
 }
 
 .button:hover{
-    background-color: rgb(172, 236, 146)
+    background-color: var(--greenLight)
 }
 .reg-form, .log-form{
     opacity: 0;

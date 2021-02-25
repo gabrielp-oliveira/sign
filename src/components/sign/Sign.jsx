@@ -1,15 +1,14 @@
 import React, { useContext, useRef } from 'react'
-import axios from 'axios'
-
 import './Sign.css'
 
+import api from '../../api/api'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { UserContext } from '../../context/userContext'
 
 function Sign({ name, sun, queryId, RenderSign, setResult }) {
     const { qeryContext } = useContext(UserContext)
-
+        
     function getSign() {
         qeryContext.querys.forEach(element => {
             if (element.queryId === queryId) {
@@ -20,7 +19,8 @@ function Sign({ name, sun, queryId, RenderSign, setResult }) {
 
 
     function YesdeleteSign(params) {
-        axios.get('http://localhost:8080/delete/query/', {
+
+        api.get(`/delete/query/`, {
             params: {
                 token: `Bearer ${localStorage.Token}`,
                 User_ID: localStorage.User_id,

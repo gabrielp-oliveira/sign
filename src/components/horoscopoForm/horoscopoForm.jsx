@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import SelectTimezone from '../selectTimezone/SelectTimezone'
 import './horoscopoForm.css'
-import axios from 'axios'
 
+import api from '../../api/api'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -43,7 +43,7 @@ export default function HoroscopoForm({ cb }) {
         loading.style.display = 'block'
 
 
-        axios.post('http://localhost:8080/query', {
+        api.post(`/query`, {
             person: name.value,
             city: city.value,
             dateOfBirth: dateOfBirth.value,

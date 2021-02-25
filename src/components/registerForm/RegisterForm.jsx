@@ -1,10 +1,8 @@
 import React from 'react';
-import axios from 'axios'
 import history from '../../history/history'
+import api from '../../api/api'
 
 function Register() {
-
-
     function handlerRegister(e) {
         e.preventDefault()
         const ErrorMessage = document.querySelector('.error-Message')
@@ -24,7 +22,7 @@ function Register() {
             return ErrorMessage.innerHTML = 'Email invalid'
         }
 
-        axios.post('http://localhost:8080/auth/register', {
+        api.post(`/auth/register`, {
             name: name.value,
             email: email.value,
             password: password.value}
@@ -45,6 +43,7 @@ function Register() {
             })
             .catch((err) => {
                 resetInput()
+                ErrorMessage.style.display = 'flex'
                 ErrorMessage.innerHTML = 'Ops, something wrong'
 
             })

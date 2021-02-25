@@ -2,7 +2,6 @@
     width: 200px;
     border-right: 1px solid var(--green);
     flex-direction: column;
-    height: 100%;
 }
 
 .personSign {

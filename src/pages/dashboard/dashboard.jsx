@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useContext} from 'react'
 import './dashboard.css'
-import axios from 'axios'
+import api from '../../api/api'
+import Toggle from '../../utils/Toggle.js'
 
 import history from '../../history/history'
 import HeaderElement from '../../components/headerElements/HeaderElements'
@@ -12,7 +13,10 @@ import ResultQuery from '../../components/resultquery/ResultQuery'
 import { UserContext } from '../../context/userContext'
 
 
-import { faSignOutAlt, faQuestionCircle, faQuran, faHome } from '@fortawesome/free-solid-svg-icons'
+
+import { faSignOutAlt, faQuestionCircle, faQuran, faHome, faBars } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 
 function Dashboard() {
@@ -25,8 +29,8 @@ function Dashboard() {
 
     useEffect(() => {
 
-        console.log('atualizou')
-        axios.get('http://localhost:8080/', {
+
+        api.get('/',{
             params: {
                 token: `Bearer ${localStorage.Token}`,
                 id: localStorage.User_id
@@ -81,6 +85,9 @@ function HandleLogOut() {
 }
 
 
+    window.addEventListener("click", (e) => Toggle.windowClick(e))
+    window.addEventListener("resize", () => Toggle.windowResize())
+
     return (
         <div id="Dashboard">
             <header className="header">
@@ -88,6 +95,18 @@ function HandleLogOut() {
                 <HeaderElement item="Query" icon={faQuran} cb={GoToQuery}></HeaderElement>
                 <HeaderElement item="Info" icon={faQuestionCircle} cb={GetInformation}></HeaderElement>
                 <HeaderElement item="LogOut" icon={faSignOutAlt} cb={HandleLogOut}></HeaderElement>
+
+                <span className="hamburguer-column" onClick={Toggle.ShowColumn}><FontAwesomeIcon icon={faBars} /></span>
+                <span className="hamburguer-menu" onClick={Toggle.ShowHeaders}><FontAwesomeIcon icon={faBars} /></span>
+
+                <div className="menu">
+                    <span href="#" onClick={() => setBody(<h3>
+                        <span>Welcome, {UserInfo.name} !</span>
+                    </h3>)}>Home</span>
+                    <span href="#" onClick={GoToQuery}>query</span>
+                    <span href="#" onClick={GetInformation}>info</span>
+                    <span href="#" onClick={HandleLogOut}>Logout</span>
+                </div>
             </header>
             <main className="main">
                 <div className="column">{columnSign}</div>

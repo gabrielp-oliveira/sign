@@ -43,3 +43,23 @@
     text-shadow: none;
 
 }
+
+@media (max-width: 500px) { 
+
+    .planet{
+        height: 80px;
+        width: 85px;
+        margin: 5px
+    }
+
+    .planet > h3 {
+        font-size: 16px;
+    }
+    .planet > strong {
+        font-size: 14px;
+    }
+
+    
+ }
+
+ 

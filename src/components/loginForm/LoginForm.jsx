@@ -1,9 +1,8 @@
 import React from 'react'
-import axios from 'axios'
 import history from '../../history/history';
+import api from '../../api/api'
 
 function LoginForm() {
-
 
     function loginHandler(e) {
         e.preventDefault()
@@ -16,7 +15,9 @@ function LoginForm() {
             email.value = ''.trim()
             password.value = ''.trim()
         }
-        axios.post("http://localhost:8080/auth/authenticate", {
+
+
+        api.post(`/auth/authenticate`, {
             email: email.value,
             password: password.value
         })
@@ -42,7 +43,8 @@ function LoginForm() {
             console.log('error')
             resetInput()
             console.log(error)
-            ErrorMessage.innerHTML = 'Ops, something wrong'
+            ErrorMessage.style.display = 'flex'
+            ErrorMessage.innerHTML = error
 
         })
 
