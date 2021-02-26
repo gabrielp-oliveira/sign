@@ -4,13 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import { BrowserRouter as Route } from 'react-router-dom'
+import { HashRouter as Route } from 'react-router-dom'
 import UserProvider from './context/userContext'
 
 ReactDOM.render(
   <React.StrictMode>
     <UserProvider>
-      <Route>
+      <Route basename={process.env.PUBLIC_URL}>
+        {console.log(process.env.PUBLIC_URL)}
         <App />
       </Route>
     </UserProvider>

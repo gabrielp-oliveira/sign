@@ -31,7 +31,7 @@ function Register() {
                 if (!data.data.error) {
                     localStorage.setItem('Token', data.data.token)
                     localStorage.setItem('User_id', data.data.userInfo._id)
-                    history.push('/')
+                    history.push(process.env.PUBLIC_URL)
                     document.location.reload();
                     ErrorMessage.style.display = 'none'
                 }else{

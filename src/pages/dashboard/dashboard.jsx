@@ -81,7 +81,7 @@ function HandleLogOut() {
     localStorage.removeItem('Token')
     localStorage.removeItem('User_id')
     document.location.reload();
-    history.push('/login')
+    history.push(process.env.PUBLIC_URL+'/login')
 }
 
 

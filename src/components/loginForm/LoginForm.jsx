@@ -29,7 +29,8 @@ function LoginForm() {
         })
         .then((data) => {
             if (!data.data.error) {
-                history.push('/')
+                history.push(process.env.PUBLIC_URL)
+                
                 document.location.reload();
                 console.log('1')
             } else {

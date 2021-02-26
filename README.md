@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+<p> If you want to take a look on all screens of the App, click <a href="https://biel-97.github.io/sign/#/sign/login" target="_blank">here.</a></p>
+<p><Strong>OBS:. use google chrome or firefox for more efficient.</strong></p>
+<h2>Goal</h2> 
+<p><i>"Use my knowledge to improve and test my skills as a programmer".:rocket:</i></p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p>This project is part of my portfolio, so feel free to get in touch for feedback on the code, structure or other reason that will help me become a better programmer!</p>
 
-## Available Scripts
+<span>E-mail: <a>gabriel.pso100@gmail.com</a ></span><br>
+<span><a target="_blank" href="https://www.linkedin.com/in/gabriel-97-oliveira">linkedin</a></span><br>
 
-In the project directory, you can run:
+<h2>Observations</h2>
+<p>If you want to check the back-end services repository, click <a target="_blank" href="https://github.com/Biel-97/sign-back"> here</a>.</p>
 
-### `npm start`
+<p>It was utilized the Astrosoft API to get truthful astrology, you can check the api <a href="http://docs.innovativeastrosolutions.com/" target="_blank">here</a>.</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<p>Also it was utilized a api to convert places and addresses and get the latitude and longitude, click <a href="https://positionstack.com/documentation" target="_blank">here</a> to read more.</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<p>
+This app is hosted on <strong>heroku free plan</strong>, meaning that on the initial load, the server mat neet to start which can cause a <strong>delay</strong>.
+</p>
 
-### `npm test`
+	
+<h2>Functionalities</h2>
+• login and password with authentication token.<br>
+• obtains the signs according to the date of birth, place of birth and timezoneid.<br>
+• stores search data in a database that can be accessed at any time, being possible to delete it as well.<br><br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+<img src="ReadMeImages\sign-preview-1.png"
+width="200"
+height="210"  alt="home-page"> &nbsp;
+<img src="ReadMeImages\sign-preview-2.png"
+width="200"
+height="210"  alt="sign info">&nbsp;&nbsp;
+<img src="ReadMeImages\sign-preview-3.png"
+width="200"
+height="210"  alt="sign form">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<strong>OBS:. the database is using a free hosting, which can lead to a storage limitation, so for each account only 5 maps will be allowed, but they can be deleted at any time by the user, giving space for a new astrological chart..:sweat_smile:</strong>
+<hr>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<h2>Cloning the Repository</h2>
+<span>$ git clone https://github.com/Biel-97/sign</span><br>
+<span>$ cd sign</span><br>
+<span>$ npm install</span>
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<h2>setting the app</h2>
+Now, two things are importants:<br>
 
-### `npm run eject`
+ <p>you can find the methodology to <strong>cloning and config the back-end repository <a target="_blank" href="https://github.com/Biel-97/sign-back"> here</a></strong></p>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<p>its important create a <strong>.env</strong>  file in the root application with the following variables:<p>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<strong>REACT_APP_SERVER_URL </strong> <i>---- </i>this url its the back-end server. if you dont config this variable, by default the url will be http://localhost:8080 .<br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<h2>Built With</h2>
+<span>• React JS </span><br>
+<span>• React-router-dom </span><br>
+<span>• Axios</span><br>
+<span>• fontawesome</span><br><br>
 
-## Learn More
+<hr>
+<span>E-mail: <a>gabriel.pso100@gmail.com</a ></span><br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<span><a href ="http://www.linkedin.com/in/gabriel-97-oliveira" target="_blank">LinkedIn</a> </span><br>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+:thumbsup:
