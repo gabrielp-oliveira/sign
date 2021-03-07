@@ -63,3 +63,6 @@
 .information > div > p > a:hover{
     color: var(--greenLight);
 }
+.information strong {
+    color: var(--green);
+}

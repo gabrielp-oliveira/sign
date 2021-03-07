@@ -24,6 +24,8 @@ function GetInformation() {
 
             <div className="inf">
                 <h4 className="inf">Observations</h4>
+
+                <p className="inf">this is a <strong>Jyotisha chart</strong> also known as <strong>Vedic astrology</strong> which is an <strong>Indian system of astrology</strong> that uses <strong>Ayanamsa Lahiri</strong>, being different from the traditional western astrology, so it is possible to have differences in signs between these two methodologies.</p>
                 <p className="inf">It was utilized the Astrosoft API to get truthful astrology, you can check the api <a href="http://docs.innovativeastrosolutions.com/" target="_blank">here</a>.</p>
                 <p className="inf">Also it was utilized a api to convert places and addresses and get the latitude and longitude, click <a href="https://positionstack.com/documentation" target="_blank">here</a> to read more.</p>
                 <p>Because of the api's request limit, it is only possible to perform 5 sign searches, however it is possible to delete some old ones and perform another if necessary.</p>
