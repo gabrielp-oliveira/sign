@@ -9,6 +9,10 @@
 <span><a target="_blank" href="https://www.linkedin.com/in/gabriel-97-oliveira">linkedin</a></span><br>
 
 <h2>Observations</h2>
+
+
+<p>this is a <strong>Jyotisha chart</strong> also known as <strong>Vedic astrology</strong> which is an <strong>Indian system of astrology</strong> that uses <strong>Ayanamsa Lahiri</strong>, being different from the traditional western astrology, so it is possible to have differences in signs between these two methodologies.</p>
+
 <p>If you want to check the back-end services repository, click <a target="_blank" href="https://github.com/Biel-97/sign-back"> here</a>.</p>
 
 <p>It was utilized the Astrosoft API to get truthful astrology, you can check the api <a href="http://docs.innovativeastrosolutions.com/" target="_blank">here</a>.</p>
@@ -32,9 +36,7 @@ height="210"  alt="home-page"> &nbsp;
 <img src="ReadMeImages\sign-preview-2.png"
 width="200"
 height="210"  alt="sign info">&nbsp;&nbsp;
-<img src="ReadMeImages\sign-preview-3.png"
-width="200"
-height="210"  alt="sign form">
+
 
 <strong>OBS:. the database is using a free hosting, which can lead to a storage limitation, so for each account only 5 maps will be allowed, but they can be deleted at any time by the user, giving space for a new astrological chart..:sweat_smile:</strong>
 <hr>

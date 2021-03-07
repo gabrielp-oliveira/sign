@@ -37,7 +37,9 @@ function Dashboard() {
             }
         })
             .then((data) => {
-
+                if(data.data.error){
+                    HandleLogOut()
+                }
                 setColumnSign([])
                 GoHome(data.data.name)
                 SetQueryContext(data.data)

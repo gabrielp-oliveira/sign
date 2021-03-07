@@ -12,7 +12,7 @@ function ResultQuery({ query }) {
         setMap([])
 
         keys.forEach((element) => {
-            if (element !== 'id' && element !== 'person' && element !== 'queryId' && element !== 'dateOfBirth') {
+            if (element !== 'id' && element !== 'person' && element !== 'queryId' && element !== 'dateOfBirth' && element !== 'minute' && element !== 'hour') {
                 
                 if(query.error){
                     setMap(<div className="error-Message">{query[element]}</div>)
@@ -38,6 +38,7 @@ function ResultQuery({ query }) {
         <div className="map">
             <h4>{query.person}</h4>
             <h5>{query.dateOfBirth}</h5>
+            <span>{query.hour}</span>
             <div className="result">{map}</div>
         </div>
     )
