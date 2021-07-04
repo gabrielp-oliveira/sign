@@ -8,7 +8,7 @@ function footer() {
         <footer className="footer">
             <div className="media-social">
                 <span className="github">
-                    <a href="https://github.com/Biel-97" target="_blank">
+                    <a href="https://github.com/gabrielp-oliveira" target="_blank">
                         <FontAwesomeIcon icon={faGithub} />
                     </a>
                 </span>

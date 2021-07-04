@@ -1,4 +1,4 @@
-<p> If you want to take a look on all screens of the App, click <a href="https://biel-97.github.io/sign/#/sign/login" target="_blank">here.</a></p>
+<p> If you want to take a look on all screens of the App, click <a href="https://gabrielp-oliveira.github.io/sign/" target="_blank">here.</a></p>
 <p><Strong>OBS:. use google chrome or firefox for more efficient.</strong></p>
 <h2>Goal</h2> 
 <p><i>"Use my knowledge to improve and test my skills as a programmer".:rocket:</i></p>
@@ -13,7 +13,7 @@
 
 <p>this is a <strong>Jyotisha chart</strong> also known as <strong>Vedic astrology</strong> which is an <strong>Indian system of astrology</strong> that uses <strong>Ayanamsa Lahiri</strong>, being different from the traditional western astrology, so it is possible to have differences in signs between these two methodologies.</p>
 
-<p>If you want to check the back-end services repository, click <a target="_blank" href="https://github.com/Biel-97/sign-back"> here</a>.</p>
+<p>If you want to check the back-end services repository, click <a target="_blank" href="https://github.com/gabrielp-oliveira/sign-back"> here</a>.</p>
 
 <p>It was utilized the Astrosoft API to get truthful astrology, you can check the api <a href="http://docs.innovativeastrosolutions.com/" target="_blank">here</a>.</p>
 
@@ -42,7 +42,7 @@ height="210"  alt="sign info">&nbsp;&nbsp;
 <hr>
 
 <h2>Cloning the Repository</h2>
-<span>$ git clone https://github.com/Biel-97/sign</span><br>
+<span>$ git clone https://github.com/gabrielp-oliveira/sign</span><br>
 <span>$ cd sign</span><br>
 <span>$ npm install</span>
 <br>
@@ -50,7 +50,7 @@ height="210"  alt="sign info">&nbsp;&nbsp;
 <h2>setting the app</h2>
 Now, two things are importants:<br>
 
- <p>you can find the methodology to <strong>cloning and config the back-end repository <a target="_blank" href="https://github.com/Biel-97/sign-back"> here</a></strong></p>
+ <p>you can find the methodology to <strong>cloning and config the back-end repository <a target="_blank" href="https://github.com/gabrielp-oliveira/sign-back"> here</a></strong></p>
 
 <p>its important create a <strong>.env</strong>  file in the root application with the following variables:<p>
 
